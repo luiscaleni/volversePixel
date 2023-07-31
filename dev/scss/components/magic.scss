@@ -1,0 +1,16 @@
+.magic{
+    transform: scale(0) translate(0px, 0px) ;
+    z-index: -1;
+}
+
+.magicUP{
+    animation: maximizar .3s ease-in-out;
+    @keyframes maximizar {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}

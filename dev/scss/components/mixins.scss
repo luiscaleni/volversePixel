@@ -1,0 +1,109 @@
+$br: 40px;
+$br1:25px;
+$br2: 20px;
+@mixin app-img{
+    img{
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+    }
+}
+@mixin app-img-dos($w, $h){
+    img{
+        width: $w;
+        height: $h;
+        border-radius: 10px;
+    }
+}
+@mixin loader{
+    .loader {
+        width: 48px;
+        height: 48px;
+        top: 50%;
+        border: 5px dotted #FFF;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        box-sizing: border-box;
+        animation: rotation 2s linear infinite;
+    
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        } 
+    }
+}
+@mixin ejecutar{
+    .execute{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+        border-radius: 25px;
+        z-index: 2;
+        background-color: rgb(255, 255, 155);
+        .home{
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            bottom: 10px;
+            color: #333;
+            font-size: 30px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .ventana-abierta{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+        border-radius: 25px;
+        z-index: 2;
+        background-color: rgba(155, 155, 155, 0.3);
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        p{
+            width: 70%;
+            height: auto;
+            font-size: 20px;
+            color: white;
+            padding: 5px;
+
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 70%;
+            height: 70%;
+            border-radius: $br2;
+        }
+        .home{
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            bottom: 10px;
+            color: #333;
+            font-size: 30px;
+            font-weight: bold;
+            z-index: 3;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

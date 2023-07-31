@@ -1,0 +1,17 @@
+{
+    "name": "luis/petslife",
+    "autoload": {
+        "psr-4": {
+            "Luis\\Petslife\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luiscaleni",
+            "email": "77455357+luiscaleni@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6"
+    }
+}
