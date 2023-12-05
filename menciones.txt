@@ -1,5 +1,0 @@
-#Codigo JS para campo de Texto
-https://tutorialesenlinea.es/584-obtener-el-valor-de-un-campo-de-texto-con-jquery.html
-
-#Bramus Router - Rotear la pagina
-https://github.com/bramus/router

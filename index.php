@@ -1,3 +1,3 @@
 <?php
-require 'vendor/autoload.php';
-require 'src/lib/routes.php';
+require __DIR__ . '/vendor/autoload.php';
+require('src/views/main.php');

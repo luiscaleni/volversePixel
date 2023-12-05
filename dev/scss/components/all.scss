@@ -1,206 +1,122 @@
+$br: 4em;
+$br1:2em;
+$br2: 1.6em;
 *{
     margin:0px;
     padding: 0px;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-shadow: 1px 0px 3px #000;
-    scroll-behavior: smooth;
-    background-color: rgb(78, 78, 78);
-    
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .hide{
     display: none;
 }
 
-.container{
-    position: relative;
-    width: 300px;
-    height:649px;
-    border: 12px solid black;
-    box-shadow: inset 0px 0px 10px #222;
-    border-radius:$br;
-    background-image: url("../assets/images/wp/iphone2.png");
-    background-color: rgb(206, 94, 94);
-    transition: all 1s ease-in-out;
-    
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 0px 3px #000;
+    overflow: hidden;
+    font-size: 100%;
+    text-shadow: none;
+    background-color: #000;
+
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    //Loader
-    @include loader();
-    //Execute
-    @include ejecutar();
-    .cont-apps-home{
-        width: 100%;
-        height: 100%;
-        //background-color: #000;
+    justify-content: center;
+    align-items: flex-start;
+    .volversePIXEL{
+        width: auto;
+        height: 1em;
+        margin-left: 0.3em;
+        color:#0ABEEC;
+        text-shadow: 0 0 0.2em #333;
+        font-weight: bold;
+    }
+    #copyright{
+        position: absolute;
+        z-index: 12;
+        width: 100vw;
+        height: auto;
+        bottom: 15vh;
+        color: white;
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .notf{
-            position: absolute;
-            top: 0px;
-            width: 82%;
-            height: 25px;
-            padding: 5px 30px 0px 30px;
-            color: white;
-            text-shadow: 1px 0px 2px #000;
-            border-radius: $br $br 0px 0px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .info{
-                font-size: 12px;
-
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                .battery{
-                    width: 30px;
-                    height: 16px;
-                    padding: 1px 2px;
-                    border-radius: 5px;
-                    background-color: rgb(0, 207, 0);
-                }
-                .punto_blanco{
-                    width: 5px;
-                    height: 10px;
-                    border-radius: 0px 5px 5px 0px;
-                    background-color: white;
-                }
-            }
-            .dynamic-island{
-                width: 40%;
-                height: 100%;
-                border-radius: $br2;
-                background-color: black;
-            }
+        #author{
+            font-weight: bolder;
+            font-style: italic;
         }
-        .content{
-            width: 100%;
-            height: 80%;
-            color: white;
-            padding-top: 30px;
-            border-radius: $br1 $br1 0px 0px;
-            //background-color: blue;
-            
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            align-content: flex-start;
-            flex-wrap: wrap;
-            .cont-app{
-                width: 48px;
-                height: 68px;
-                padding: 13.5px;
-                font-size: 10px;
-                color: white;
-                text-decoration: none;
-                //background-color: #333;
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                @include app-img;
-            }
-            .orange{
-                width: 48px;
-                height: 48px;
-                cursor: pointer;
-                border-radius: 10px;
-                margin: 1px;
-                display: block;
-                background-color: orange;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .widget{
-                width: 128px;
-                height: 128px;
-                padding: 11px;
-                border-radius: 40px;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        .pantallas{
-            width: 100%;
-            height: 17%;
-            margin-top: 2%;
-
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            #ventanas{
-                width: 40px;
-                height: 20px;
-                border-radius: $br2;
-                padding: 0px 5px 5px 5px;
-                background-color: grey;
-
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                p{
-                    color: white;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-            }
-        }
-        .dock{
-            position: absolute;
-            bottom: 10px;
-            width: 90%;
-            height: 55px;
-            padding-top: 10px;
-            border-radius: $br2;
-            background-color: rgba(230, 230, 230, 0.3);
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            a{
-                margin: 0px 10px;
-                @include app-img;
-            }
+        p{
+            width: auto;
+            min-height: 1em;
+            margin: 0.1em;
+            font-size: 0.8em;
         }
     }
-
-    .home-init{
-        position: absolute;
+    .contImg{
         width: 100%;
-        bottom: 1px;
+        height: auto;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        a{
-            cursor: pointer;
-            width: 80%;
-            height: 8px;
-            font-size: 30px;
-            font-weight: bold;
+        img{
+            width: auto;
+            height: 100%;
+            margin-bottom: 0.5em;
+        }
+    }
+    .content{
+        width: 88vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #root{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        #contentQR{
+            position: absolute;
+            z-index: 150;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/images/bg.png");
+            background-position-x: 0;
+            background-position-y: 0;
+            background-repeat: repeat;
+            display: none;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            #qr{
+                width: auto;
+                height: 100%;
+                max-height: 788px;
+                border-radius: 15% 15% 0em 0em;
+            }
+        }
+        @include loader;
+        @include tyc;
+        .movil{
+            position: relative;
+            overflow: hidden;
+            width: 100vw;/*420px;/*480px;*/
+            height: 100vh;/*910px;/*854px;*/
+            box-shadow: inset 0px 0px 10px #222;
+            box-shadow: 4px 8px 4px #5a5a5a;
+            background-color:#000;
+            transition: all .3s ease-in-out;
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            #emojis{position: absolute; z-index: 1200; width: 100vw; height: auto;}
+            @include messageAlert;
+            @include notification;
+            @include contentApp;
         }
     }
 }

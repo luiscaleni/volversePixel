@@ -1,0 +1,341 @@
+$br: 40px;
+$br1:25px;
+$br2: 20px;
+$width: 88vw;
+@mixin contentApp{
+    .contentApp{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        color: white;       
+        background-color: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #contVPB{
+            position: absolute;
+            z-index: 12;
+            width: 100%;
+            height: 0.2em;
+            top: 0;
+            background-color: #000;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            #videoProgressBar {
+                animation: videoPB 40s normal forwards;
+                height: 0.2em;
+                width: 0;
+                background: #525252;
+                display: none;
+            }
+            @keyframes videoPB {
+                0% { width: 0; }
+                100% { width: 100%; }
+            }
+        }
+        #contMsgNav{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: 11;
+            top: 5em;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+            #msgNav{
+                max-width: 90%;
+                min-height: 1em;
+                padding: 0.4em 0.5em 0.4em 0.5em;
+                border-radius: 0.6em;
+                background-color: red;
+            }
+        }
+        #screenPlay{
+            position: absolute;
+            z-index: 13;
+            width: 100vw;
+            height: 100vh;
+            min-width: 720px;
+            min-width: 1560px;
+            top: 0;
+            background-image: url("../assets/images/blur.png");
+            background-repeat: repeat;
+            backdrop-filter: blur(5px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #webcamButton{
+                width: auto;
+                border: none;
+                border-radius: 50%;
+                margin: 3em;
+                background-color: transparent;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 1em;
+                }
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            #pause{
+                width: auto;
+                border: none;
+                border-radius: 50%;
+                background-color: transparent;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 1em;
+                }
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        #screenPause{
+            position: absolute;
+            z-index: 11;
+            width: 100vw;
+            height: 100vh;
+            min-width: 720px;
+            min-width: 1560px;
+            background-color: #3333331a;
+            backdrop-filter: blur(8px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #appScreen{
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            #alertHome{
+                position: absolute;
+                z-index: 14;
+                min-width: 70vw;
+                max-width: 90vw;
+                height: auto;
+                border-radius: 2em;
+                box-shadow: 0.1em 0.1em 0.2em #333;
+                background-color: white;
+
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                #alertHomeMsg{
+                    width: 100%;
+                    height: auto;
+                    color: #000;
+                    padding: 1.4em;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #optionBtn{
+                    width: 100%;
+                    height: auto;
+                    border-top: 0.1em solid #0066ff;
+
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    p{
+                        color: #ccc;
+                        font-size: 20px;
+                    }
+                    a{
+                        width: 50%;
+                        padding: 1em;
+                        font-size: 0.8em;
+                        color: #0066ff;
+                        text-decoration: none;
+
+                        display: flex;
+                        justify-content:center;
+                        align-items: center;
+                    }
+                }
+            }
+            #header{
+                position: absolute;
+                z-index: 8;
+                top: 0;
+                width: 100vw;
+                height: auto;
+                padding-top: 2em;
+                padding-bottom: 1em;
+                color: white;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #headerTitle{
+                    width: auto;
+                    height: 100%;
+                    font-size: 1.5em;
+                    font-weight: bolder;
+                }
+                #headerOptions{
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            #contentDataPublic{
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: 6em;
+                font-size: 1em;
+                padding-top: 1em;
+                bottom: 7em;
+                color: white;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                #dataPublic{
+                    width: 100%;
+                    height: auto;
+
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    #infoPublic{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{    
+                            cursor: pointer;
+                            width: 2.5em;
+                            height: auto;
+                            border:0.1em solid white;
+                            border-radius: 0.6em;
+                        }
+                        #username{
+                            cursor: pointer;
+                            padding: 0.2em 0.3em 0.1em 0.3em;                            
+                        }
+                    }
+                    #suscrito{
+                        cursor: pointer;
+                        padding: 0.2em 0.3em 0.1em 0.3em;
+                        font-weight: bold;
+                        border-radius: $br2;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        &:hover{
+                            background-color: rgba(255, 255, 255, 0.6);
+                            transition: all ease-in-out .3s;
+                        }
+                    }
+                }
+                #titleShort {
+                    margin: 0.5em 0;
+                    font-size: 1em;
+                }
+            }
+            #nav{
+                position: absolute;
+                z-index: 10;
+                width: 100vw;
+                min-height: 3.5em;
+                bottom: 0;
+                border-top: 0.1em solid #333;
+                background-color: #000;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #contElementsNav{
+                    width: $width;
+                    height: 100%;
+                    max-width: 50em;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        width: auto;
+                        height: 100%;
+                        img{
+                            width: auto;
+                            height: 1.5em;
+                        }
+                    }
+                }
+            }
+            #contVideo {
+                position: absolute;
+                z-index: 7;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                min-height: 1600px;
+                background-color: #000;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                #localVideo {
+                    position: absolute;
+                    z-index: 2;
+                    width: 100vw;
+                    height: auto;
+                    max-width: 1080px;
+                    max-height: 1920px;
+                    margin-bottom: 6em;
+                }
+
+                #webcam{ /*video - webcam*/
+                    position: absolute;
+                    z-index: 0;
+                    opacity: 0.9;
+                    width:100%;
+                    height: auto;
+                    transform: rotateY(180deg);
+                    -webkit-transform: rotateY(180deg);
+                    -moz-transform: rotateY(180deg);
+                }
+            }
+        }
+        #outputCanvas{ /*canvas */
+            position: absolute;
+            width: auto;
+            height: 100%;
+            
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+        }
+
+    }
+}

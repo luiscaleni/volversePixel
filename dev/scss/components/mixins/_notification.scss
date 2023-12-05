@@ -1,0 +1,70 @@
+@mixin notification{
+    #notification{
+        position: absolute;
+        z-index: 10;
+        width: 90vw;
+        height: auto;
+        padding: 1em;
+        top: 1em;
+        font-size: 18px;
+        color: white;
+        border-radius: $br1;
+        background-color: #0066ff;
+    
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        //contImg
+        #contPositionMsg{
+            width: 100%;
+            height: auto;
+            margin: 0.5em 0;
+
+            display: none;
+            justify-content:center;
+            align-items: flex-end;
+            #msg1, #msg2, #msg3, #msg4, #msg5{
+                width: 0.4em;
+                height: 0.4em;
+                margin: 0 0.3em;
+                background-color: #a8a8a8;
+                border-radius: 100%;
+    
+                display: inline-block;
+                box-sizing: border-box;
+            }
+        }
+        #contMsg{
+            width: 100%;
+            height: auto;
+            margin-top: 0.5em;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            #text1, #alert, #text3{
+                width: auto;
+                height: auto;
+            }
+            #contText4{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+    
+        @keyframes showData {
+            0% {
+                transform: translateY(0%);
+            }
+            100% {
+                transform: translateY(15%);
+            }
+        }
+    }
+}

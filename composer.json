@@ -1,17 +1,16 @@
 {
-    "name": "luis/petslife",
+    "name": "luis/volversepixel",
+    "description": "pav4",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Luis\\Petslife\\": "src/"
+            "Luis\\Volversepixel\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "luiscaleni",
-            "email": "77455357+luiscaleni@users.noreply.github.com"
+            "name": "Luis Caleni"
         }
     ],
-    "require": {
-        "bramus/router": "^1.6"
-    }
+    "require": {}
 }

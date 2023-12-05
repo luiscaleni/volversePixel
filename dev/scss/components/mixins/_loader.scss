@@ -1,0 +1,57 @@
+@mixin loader{
+    #screenLoader{
+        position: absolute;
+        z-index: 11;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        overflow: hidden;
+        background: linear-gradient(15deg, #0066ff, #5500ff);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        #contLoader{
+            position: absolute;
+            z-index: 12;
+            width: 100%;
+            height: auto;
+            top: 33vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img{
+                width: 70%;
+                height: auto;
+                max-width: 35em;
+            }
+            #contLoad{
+                width: 15em;
+                height: 0.5em;
+                max-width: 30em;
+                border-radius: 10em;
+                margin-top: 2em;
+                background-color: #0055ff;
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                #load {
+                    animation: load 4s normal forwards;
+                    border-radius: 10em;
+                    background: #ffffff;
+                    height: 0.5em;
+                    width: 0;
+                }
+                @keyframes load {
+                    0% { width: 0; }
+                    100% { width: 100%; }
+                }
+            }
+        }
+        //copyright
+    }
+}

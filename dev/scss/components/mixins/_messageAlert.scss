@@ -1,0 +1,26 @@
+@mixin messageAlert{
+    #messageAlert {
+        position: absolute;
+        z-index: 99;
+        width: 90vw;
+        height: auto;
+        padding: 0.5em;
+        top: 1em;
+        color: #343434;
+        border-radius: $br1;
+        background-color: #FFC107;
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        //contImg
+        p{
+            width: 88%;
+            height: auto;
+            font-size: 1em;
+            margin: 1em auto;
+            text-shadow: none;
+        }
+    }
+}
